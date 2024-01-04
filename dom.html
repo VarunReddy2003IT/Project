@@ -1,0 +1,51 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>PROJECT DOM</title>
+    <link rel="stylesheet" href="dome.css">
+  </head>
+  <body>
+    <center>
+    <fieldset>
+      <legend>Subscribe</legend>
+      <p>YouTube Subscribe Button</p>
+    <button class="sub" onclick="
+      const buttonele = document.querySelector('.sub');
+      if(buttonele.innerHTML=='Subscribe'){
+        buttonele.innerHTML='Subscribed';
+      }else{
+        buttonele.innerHTML='Subscribe';
+      }
+      ">Subscribe</button>
+    </fieldset>
+    <fieldset>
+      <legend>Game</legend>
+      <p>Rock Paper Scissor</p>
+      <button onclick="
+      navigateToPage()
+      ">clickhere</button></fieldset>
+      <fieldset>
+        <legend>Amount Calculater</legend>
+    <p>Amazon Shipping Calculator<br><br>  Orders under $40 = +$10 shipping.<br><br>Orders over $40 = FREE shipping.</p>
+    <input type="number" name="cost" class="amount" placeholder="Enter cost" autofocus required="true">
+    <button onclick="
+      const val = document.querySelector('.amount');
+      const am=Number(val.value);
+      const printele = document.querySelector('.amount1');
+      if(am<40){
+        printele.innerHTML=`The amount to be paid is:$ ${am+10}`;
+      }else{
+        printele.innerHTML=`The amount to be paid is:$ ${am}`;
+      }
+    ">Calculate</button></fieldset>
+    <fieldset>
+      <legend>Amount</legend>
+    <p class="amount1">The amount will be displayed after enyering the cost</p></fieldset>
+    </center>
+    <script>
+      function navigateToPage() {
+        window.location.href = "rockpaper.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.sub{
+  background-color: orange;
+  color: azure;
+  border-radius: 20px;
+  padding: 5px 5px 5px 5px;
+}
+body{
+  margin-left: 400px;
+  margin-right: 300px;
+  background-color: black;
+  color: azure;
+}

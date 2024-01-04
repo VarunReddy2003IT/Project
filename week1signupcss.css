@@ -1,0 +1,11 @@
+fieldset{
+  margin-left: 400px;
+  margin-right: 400px;
+}
+textarea{
+  resize: none;
+}
+body{
+  color:azure;
+  background-color: black;
+}

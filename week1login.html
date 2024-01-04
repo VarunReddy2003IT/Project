@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="week1logincss.css">
+  </head>
+  <body>
+    <center><h1>Login Page</h1></center>
+    <fieldset> 
+      <legend>Login</legend>
+      <lable>User Name:</label>
+      <input type="text" placeholder="Enter name" class="username" id="username" name="username">
+      <br><br>
+      <lable>Password:</label>
+        <input type="password" placeholder="Enter password" class="password" id="password" name="password">
+        <br><br>
+        <button onclick="newPage2()">Forgot Password</button>
+        <button onclick="
+          navigateToPage()
+        ">Submit</button>
+          <button onclick="newPage()">Sign up</button>
+    </fieldset>
+    <script>
+      function newPage() {
+        window.location.href="week1signup.html";
+      }
+      function newPage2() {
+        window.location.href="week1forgotpassword.html";
+      }
+      function navigateToPage(){
+        var user1 = document.querySelector('.username').value;
+        var pass = document.querySelector('.password').value;
+        if(user1===""){
+          alert('Enter username');
+          user1.value="";
+          pass.value="";
+        }else if(pass===""){
+          alert('Enter password');
+          user1.value="";
+          pass.value="";
+        }else if(pass===user1){
+          alert('Recheck Password');
+          pass.value="";
+        }else{
+          window.location.href="dom.html";
+        }
+      }
+    </script>
+  </body>
+</html>

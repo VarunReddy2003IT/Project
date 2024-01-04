@@ -1,0 +1,23 @@
+table{
+  border: 2px solid white;
+  border-collapse: separate;
+  text-decoration: none;
+  background-color: black;
+
+  
+}
+tr,td{
+  border: 2px solid white;
+  color:whitesmoke;
+}
+body{
+  background-color: black;
+  color: azure;
+  font-size: 2em;
+}
+a{
+  text-decoration: none;
+  color: whitesmoke;
+  display: block;
+  padding: 10px;
+}

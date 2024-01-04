@@ -1,0 +1,103 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="week1signupcss.css">
+  </head>
+  <body>
+    <center><h1>Registration Page</h1></center>
+    <fieldset> 
+      <legend>Registeration</legend>
+      <label for="firstname">First Name:</label>
+      <br>
+      <input required="true" type="text" class="firstname" name="firstname" id="firstname">
+      <br>
+      <label for="middlename">Middle Name:</label>
+      <br>
+      <input  type="text" class="middlename" name="middlename" id="middlename">
+      <br>
+      <label for="lastname">Last Name:</label>
+      <br>
+      <input required="true" type="text" class="lastname" name="lastname" id="lastname">
+      <br><br>
+      <label>Date of Birth:</label>
+      <br>
+      <input required="true" type="date">
+      <br><br>  
+      <label id="course">Course</label>
+        <select id="course">
+          <option value="B.Tech">B.tech</option> 
+          <option value="B.Arc">B.Arc</option> 
+          <option value="BSC">BSC</option> 
+          <option value="CA">CA</option> 
+          <option value="BA">BA</option> 
+          <option value="MBA">MBA</option> 
+          <option value="MS">MS</option></select>
+          <br><br>
+      <label for="gender">Gender</label>
+      <br>
+      <input required="true" type="radio" name="gender">
+      <label for="gender">Male</label>
+      <input required="true" type="radio" name="gender" >
+      <label for="gender">Female</label>
+      <br><br>
+      <label >Phone Number:</label>
+      <br>
+      <input required="true" type="text" id="username" name="username" maxlength="10">
+      <br><br>
+      <label>Current Address</label>
+      <br>
+      <textarea placeholder="Enter Address" rows="4" cols="50" maxlength="200"></textarea>
+      <br>
+      <label>Email:</label>
+      <br>
+      <input required="true" type="email">
+      <br><br>
+      <lable for="password">Password:</label>
+      <br>
+      <input type="password" required="true" placeholder="Enter password" name="password" id="password" class="password">
+      <br><br>
+      <lable for="reenterpassword">Re-type Password:</label>
+      <br>
+      <input type="password" required="true" placeholder="Enter password" name="reenterpassword" class="reenterpassword" id="reenterpassword">
+      <br><br>
+      <input required="true" type="checkbox"id="check" required="true">
+      <label for="check">Iaccept the terms and conditions</label>
+      <br><br>
+      <button  onclick="navigateToPage()">Submit</button>
+    </fieldset>
+    <script>
+      function navigateToPage() {
+        const pass1 = document.querySelector(".password");
+        const fname = document.querySelector(".firstname");
+        const lname = document.querySelector(".lastname");
+        const pass2 = document.querySelector(".reenterpassword");
+
+        if(fname.value===""||lname.value==""){
+          alert("Enter name");
+          fname.value="";
+          lname.value="";
+        }else if(fname.value===lname.value){
+          alert("Reenter name");
+          pass1.value="";
+          pass2.value="";
+        }else if(pass1.value===""){
+          alert("Enter password");
+          pass1.value="";
+          pass2.value="";
+        }else if(pass1.value===lname.value||pass1.value===fname.value){
+          alert("Password not contain name");
+          pass1.value="";
+          pass2.value="";
+        }else if(pass1.value===pass2.value){
+          window.location.href="dom.html";
+        }
+        else{
+          alert("Password Mismatch");
+          pass1.value="";
+          pass2.value="";
+        }
+      }
+    </script>
+  </body>
+</html>

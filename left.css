@@ -1,0 +1,27 @@
+body{
+  margin-left: 0;
+  background-color: black;
+}
+li{
+
+  background-color: aqua;
+  margin-left: 0;
+}
+a{
+  border: 2px solid black;
+  padding: 1em;
+  text-align: center;
+  border-collapse: collapse;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+li:nth-child(1){
+  border-radius: 20px 20px 0 0;
+  padding: 1em;
+  text-align: center;
+  background-color: yellow;
+}
+li:last-child{
+  border-radius: 0 0 20px 20px;
+}

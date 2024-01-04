@@ -1,0 +1,81 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Rock Paper</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button  onclick="
+      const paraele = document.querySelector('.p1');
+        fun1();
+        if(computerMove==='Rock'){
+          ts=ts+1;
+        }else if(computerMove==='Paper'){
+          ls=ls+1;
+        }else{
+          ws=ws+1;
+        }
+      paraele.innerHTML = `${computerMove}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wins:${ws}, Losses=${ls}, Tie=${ts}`;
+    ">Rock</button>
+    <button onclick="
+    const paraele = document.querySelector('.p1');
+    const computerm = Math.random();
+      if(computerm>=0 && computerm<1/3){
+        computerMove='Rock';
+      }else if(computerm>=1/3&&computerm<2/3){
+        computerMove='Paper';
+      }else{
+        computerMove='Scissor';
+      }
+      if(computerMove==='Rock'){
+        ws=ws+1;
+      }else if(computerMove==='Paper'){
+        ts=ts+1;
+      }else{
+        ls=ls+1;
+      }
+    paraele.innerHTML = `${computerMove}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wins:${ws}, Losses=${ls}, Tie=${ts}`;
+  ">Paper</button>
+    <button onclick="
+    const paraele = document.querySelector('.p1');
+    const computerm = Math.random();
+      if(computerm>=0 && computerm<1/3){
+        computerMove='Rock';
+      }else if(computerm>=1/3&&computerm<2/3){
+        computerMove='Paper';
+      }else{
+        computerMove='Scissor';
+      }
+      if(computerMove==='Rock'){
+        ls=ls+1;
+      }else if(computerMove==='Paper'){
+        ws=ws+1;
+      }else{
+        ts=ts+1;
+      }
+    paraele.innerHTML = `${computerMove}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wins:${ws}, Losses=${ls}, Tie=${ts}`;
+  ">Scissor</button>
+    <p class="p1">COMPUTERMOVE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wins: 0, Losses: 0, Ties: 0</p>
+    <button onclick="
+    const paraele = document.querySelector('.p1');
+    ws=0;
+    ts=0;
+    ls=0;
+    paraele.innerHTML = `computerMove&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wins:${ws}, Losses=${ls}, Tie=${ts}`;
+    ">Reset Score</button>
+    <script>
+      var ws=0,ls=0,ts=0;
+      var computerm = Math.random();
+        function fun1(){
+          computerm = Math.random();
+          if(computerm>=0 && computerm<1/3){
+            computerMove='Rock';
+          }else if(computerm>=1/3&&computerm<2/3){
+            computerMove='Paper';
+          }else{
+            computerMove='Scissor';
+          }
+        }
+    </script>
+  </body>
+</html>

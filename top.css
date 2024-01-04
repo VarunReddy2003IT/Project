@@ -1,0 +1,14 @@
+h2{
+  margin-left: 0px;
+  font-size: 2em;
+  color: firebrick;
+}
+span{
+  font-family: cursive;
+}
+body{
+  background-color: black;
+  color: azure;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+}
